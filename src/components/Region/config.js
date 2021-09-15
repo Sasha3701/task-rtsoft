@@ -28,7 +28,7 @@ const createConfig = (rose, countries, region) => {
       {
         name: "Population",
         type: "pie",
-        radius: "85%",
+        radius: "50%",
         center: ["50%", "50%"],
         data: countries,
         roseType: rose,
@@ -46,7 +46,7 @@ const createConfig = (rose, countries, region) => {
         itemStyle: {
           color: "#c23531",
           shadowBlur: 200,
-          shadowColor: "rgba(0, 0, 0, 0.5)",
+          shadowColor: "rgba(0, 0, 0, 0)",
         },
 
         animationType: "scale",

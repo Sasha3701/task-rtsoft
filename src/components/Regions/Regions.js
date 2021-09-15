@@ -1,5 +1,24 @@
-const Regions = () => {
-	return
-}
+import { Grid } from "@material-ui/core";
+import { REGIONS_ARR } from "../../const";
+import Region from "../Region/Region";
 
-export default Regions
+const Regions = () => {
+  return (
+    <div style={{ backgroundColor: "#2c343c" }}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        alignItems="stretch"
+      >
+        {REGIONS_ARR.map((region, index) => (
+          <Grid item>
+            <Region key={index} region={region}/>
+          </Grid>
+        ))}
+      </Grid>
+    </div>
+  );
+};
+
+export default Regions;

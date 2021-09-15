@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { save } from "./store/regions/regionsSlice";
 import api from "./api";
-import { Region } from "./components";
-import { REGIONS_ARR } from "./const";
+import { Regions } from "./components";
 
 const App = () => {
   const [isReady, setIsReady] = useState(false);
@@ -23,15 +22,7 @@ const App = () => {
       });
   }, [dispatch]);
 
-  return (
-    isReady && (
-      <div style={{ backgroundColor: '#2c343c' }}>
-        {REGIONS_ARR.map((region, index) => (
-          <Region key={index} region={region} />
-        ))}
-      </div>
-    )
-  );
+  return isReady && <Regions />;
 };
 
 export default App;
