@@ -7,3 +7,8 @@ export const REGIONS_OBJ = {
 };
 
 export const REGIONS_ARR = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+
+export const VISUAL_MAP = {
+  MAX: 600,
+  MIN: 80,
+};
