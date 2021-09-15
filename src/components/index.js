@@ -1,5 +1,7 @@
-import RegionInfo from "./RegionInfo/RegionInfo";
+import Region from "./Region/Region";
+import Regions from './Regions/Regions';
 
 export  {
-    RegionInfo
+    Region,
+    Regions
 }
