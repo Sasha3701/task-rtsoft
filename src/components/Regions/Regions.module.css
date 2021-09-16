@@ -1,0 +1,14 @@
+.regions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.regions__item {
+	padding: 0;
+	margin: 0;
+}

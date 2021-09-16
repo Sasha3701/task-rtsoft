@@ -28,7 +28,7 @@ const createConfig = (rose, countries, region) => {
       {
         name: "Population",
         type: "pie",
-        radius: "50%",
+        radius: "60%",
         center: ["50%", "50%"],
         data: countries,
         roseType: rose,

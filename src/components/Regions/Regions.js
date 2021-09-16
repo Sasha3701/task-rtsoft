@@ -1,23 +1,15 @@
-import { Grid } from "@material-ui/core";
-import { REGIONS_ARR } from "../../const";
 import Region from "../Region/Region";
+import style from "./Regions.module.css";
 
-const Regions = () => {
+const Regions = ({ elements }) => {
   return (
-    <div style={{ backgroundColor: "#2c343c" }}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="stretch"
-      >
-        {REGIONS_ARR.map((region, index) => (
-          <Grid item>
-            <Region key={index} region={region}/>
-          </Grid>
-        ))}
-      </Grid>
-    </div>
+    <ul className={style.regions}>
+      {elements.map((region, index) => (
+        <li key={index} className={style.regions__item}>
+          <Region key={index} region={region} />
+        </li>
+      ))}
+    </ul>
   );
 };
 
