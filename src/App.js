@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { save } from "./store/regions/regionsSlice";
 import api from "./api";
 import { Regions } from "./components";
+import { Pagination } from '@material-ui/core';
 
 const App = () => {
   const [isReady, setIsReady] = useState(false);
@@ -22,7 +23,12 @@ const App = () => {
       });
   }, [dispatch]);
 
-  return isReady && <Regions />;
+  return isReady && (
+    <>
+      <Regions />
+      <Pagination count={10} shape="rounded" size="large"/>
+    </>
+  )
 };
 
 export default App;

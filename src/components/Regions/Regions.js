@@ -8,7 +8,7 @@ const Regions = () => {
       <Grid
         container
         direction="row"
-        justifyContent="space-between"
+        justifyContent="center"
         alignItems="stretch"
       >
         {REGIONS_ARR.map((region, index) => (

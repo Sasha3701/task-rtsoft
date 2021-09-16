@@ -6,7 +6,7 @@ const createConfig = (rose, countries, region) => {
     title: {
       text: region,
       left: "center",
-      top: 0,
+      top: 50,
       textStyle: {
         color: "#ccc",
       },
