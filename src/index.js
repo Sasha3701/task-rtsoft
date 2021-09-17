@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import App from "./App";
 import store from "./store/store";
-import { StyledEngineProvider } from "@material-ui/core/styles";
-import "./index.css";
+import { Normalize } from "styled-normalize";
+import { StyledEngineProvider } from "@mui/material/styles";
 
 const app = (
   <Provider store={store}>
+    <Normalize />
     <StyledEngineProvider injectFirst>
       <App />
     </StyledEngineProvider>

@@ -2,18 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { save } from "./store/regions/regionsSlice";
 import api from "./api";
-import { Regions } from "./components";
-import { Pagination } from "@material-ui/core";
+import { Header, Regions } from "./components";
 import { REGIONS_ARR } from "./const";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-} from "@material-ui/core";
-import { Logo } from "./images";
-import style from "./App.module.css";
+import { Pagination } from "@mui/material"
 
 const App = () => {
   const [isReady, setIsReady] = useState(false);
@@ -47,13 +38,8 @@ const App = () => {
 
   return (
     isReady && (
-      <div className={style.app}>
-        <AppBar className={style.app__bar} position="static">
-          <Toolbar>
-            <Logo />
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
+      <>
+        <Header/>
         <Regions elements={elements} />
         <Pagination
           onChange={handleChangePage}
@@ -64,7 +50,7 @@ const App = () => {
           hidePrevButton
           hideNextButton
         />
-      </div>
+      </>
     )
   );
 };
