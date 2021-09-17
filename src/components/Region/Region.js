@@ -1,7 +1,6 @@
 import ReactEcharts from "echarts-for-react";
 import { useSelector } from 'react-redux';
 import createConfig from './config';
-import style from "./Region.module.css"
 
 const Region = ({ region }) => {
 
@@ -9,7 +8,7 @@ const Region = ({ region }) => {
 
   return (
     <ReactEcharts
-      className={style.pie}
+      style={{ height: "600px", width: "600px" }}
       option={createConfig(true, countries, region)}
     />
   );

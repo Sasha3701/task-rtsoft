@@ -3,8 +3,8 @@ import {
   AppBar,
   Toolbar
 } from "@mui/material";
-import { Button } from "./UI"
 import { Logo } from "../images";
+import GroupButtons from './GroupButtons';
 
 const StyledHeader = styled(AppBar)`
   background-color: white;
@@ -16,6 +16,7 @@ const StyledToolbar = styled(Toolbar)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 21px;
 `;
 
 
@@ -24,9 +25,7 @@ const Header = () => {
     <StyledHeader position="static">
       <StyledToolbar>
         <Logo />
-        <Button active={true}>
-            1 X 3
-        </Button>
+        <GroupButtons />
       </StyledToolbar>
     </StyledHeader>
   );
