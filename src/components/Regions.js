@@ -5,7 +5,7 @@ const StyledList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -16,6 +16,7 @@ const StyledItem = styled.li`
 `;
 
 const Regions = ({ elements }) => {
+
   return (
     <StyledList>
       {elements.map((region, index) => (

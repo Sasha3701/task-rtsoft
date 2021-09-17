@@ -1,12 +1,13 @@
 import { calcVMMax, calcVMMin } from "../../utils";
 
-const createConfig = (rose, countries, region) => {
+const createConfig = (countries, region, top) => {
+
   return {
     backgroundColor: "transparent",
     title: {
       text: region,
       left: "center",
-      top: 50,
+      top: top,
       textStyle: {
         color: "#ccc",
       },
@@ -31,7 +32,7 @@ const createConfig = (rose, countries, region) => {
         radius: "60%",
         center: ["50%", "50%"],
         data: countries,
-        roseType: rose,
+        roseType: true,
         label: {
           color: "rgba(255, 255, 255, 0.3)",
         },
@@ -52,7 +53,7 @@ const createConfig = (rose, countries, region) => {
         animationType: "scale",
         animationEasing: "elasticOut",
         animationDelay: function (idx) {
-          return Math.random() * 200;
+          return 200;
         },
       },
     ],

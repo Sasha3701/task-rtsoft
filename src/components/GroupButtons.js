@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { Button } from "./UI";
+import { change } from '../store/countElements/countElementsSlice';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const buttons = [
   {
@@ -25,6 +28,10 @@ const StyledList = styled.ul`
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 const StyledItem = styled.li`
 	margin: 0;
@@ -36,11 +43,15 @@ const StyledItem = styled.li`
 	}
 `;
 const GroupButtons = () => {
+
+  const countElements = useSelector(state => state.countElements.value)
+  const dispatch = useDispatch()
+
   return (
     <StyledList>
       {buttons.map(({ id, name, content }) => (
         <StyledItem key={id} name={name}>
-          <Button>
+          <Button onClick={() => dispatch(change(name))} active={name === countElements}>
 		  	{content}
 		  </Button>
         </StyledItem>

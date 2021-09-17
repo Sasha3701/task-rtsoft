@@ -33,9 +33,9 @@ const StyledFavoriteIcon = styled(FavoriteIcon)`
     color: ${({ active }) => active ? "#C96C66" : "#0000008A"};
 `
 
-const Button = ({ children, active }) => {
+const Button = ({ children, active, ...props }) => {
     return (
-        <StyledButton active={active}>
+        <StyledButton active={active} {...props}>
             <StyledFavoriteIcon active={active}/>
             {children}
         </StyledButton>
